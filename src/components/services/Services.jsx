@@ -41,72 +41,54 @@ const Services = () => {
         </p>
         <hr />
       </motion.div>
-      <motion.div className="titleContainer" variants={variants}>
-        <div className="title">
-          <img src="/people.webp" alt="" />
-          <h1>
-            <motion.b whileHover={{color:"orange"}}>Unique</motion.b> Ideas
-          </h1>
-        </div>
-        <div className="title">
-          <h1>
-            <motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business.
-          </h1>
-          <button>WHAT WE DO?</button>
-        </div>
-      </motion.div>
+      <div className="progress">
+        <h1>My Expertise</h1>
+      </div>
       <motion.div className="listContainer" variants={variants}>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Graphic Design</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            Building strong brand identities, engaging visuals, and impactful
+            marketing materials to enhance communication and audience
+            connection.
           </p>
-          <button>Go</button>
+          {/* <button>Go</button> */}
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>UI/UX Design</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            Crafting user-centric and responsive websites that offer seamless
+            navigation and exceptional user experiences.
           </p>
-          <button>Go</button>
+          {/* <button>Go</button> */}
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Social Media Design</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            Creating eye-catching social media content and managing your brand's
+            online presence to drive engagement and growth.
           </p>
-          <button>Go</button>
+          {/* <button>Go</button> */}
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Animated Web Design</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            Adding dynamic animations to your web designs, making them more
+            interactive and engaging for users.
           </p>
-          <button>Go</button>
+          {/* <button>Go</button> */}
         </motion.div>
       </motion.div>
     </motion.div>

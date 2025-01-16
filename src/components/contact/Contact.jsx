@@ -90,25 +90,13 @@ const Contact = () => {
               href="#"
               onClick={() =>
                 window.open(
-                  "http://www.linkedin.com/in/prashay-sandheliya-a2a95a251",
+                  "https://www.instagram.com/pra_0509?igsh=ajhjbDRldzMzNWI5",
                   "_blank",
                   "noopener,noreferrer"
                 )
               }
             >
               <img src="/instagram.png" alt="" />
-            </motion.a>
-            <motion.a
-              href="#"
-              onClick={() =>
-                window.open(
-                  "http://www.linkedin.com/in/prashay-sandheliya-a2a95a251",
-                  "_blank",
-                  "noopener,noreferrer"
-                )
-              }
-            >
-              <img src="/youtube.png" alt="" />
             </motion.a>
           </div>
         </div>
