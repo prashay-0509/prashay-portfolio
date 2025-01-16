@@ -43,17 +43,11 @@ const About = () => {
         <div className="textContainer">
           <p>
             Welcome to my creative space! I'm a passionate graphic designer and
-            UI/UX enthusiast, dedicated to transforming ideas into visually
-            stunning and user-friendly experiences. With a keen eye for detail
-            and a deep understanding of design principles, I craft solutions
-            that are not only aesthetically pleasing but also highly functional.
-            My journey in design has been fueled by a love for creativity and
-            innovation, allowing me to deliver impactful results that resonate
-            with clients and audiences alike. Whether it's creating compelling
-            brand identities, engaging social media content, or intuitive web
-            designs, I believe in the power of design to tell stories and make
-            lasting impressions. Let's collaborate and bring your vision to life
-            through thoughtful and creative design solutions.
+            UI/UX enthusiast, dedicated to crafting visually stunning,
+            user-friendly experiences. With a love for creativity and
+            innovation, I specialize in brand identities, social media content,
+            and intuitive web designs. Let’s collaborate to bring your vision to
+            life with impactful, thoughtful design solutions!
           </p>
         </div>
       </div>

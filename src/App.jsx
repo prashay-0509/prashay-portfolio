@@ -1,4 +1,3 @@
-import Test from "./Test";
 import "./app.scss";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
@@ -11,12 +10,11 @@ import Services from "./components/services/Services";
 const App = () => {
   return (
     <div>
-      {/* <Cursor /> */}
       <section id="Homepage">
         <Navbar />
         <Hero />
       </section>
-      <section>
+      <section id="About">
         <About />
       </section>
       <section id="Services">

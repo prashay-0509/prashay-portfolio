@@ -14,26 +14,23 @@
     text-align: center;
     color: orange;
     font-size: 52px;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
 
     @include mobile {
-      padding-top: calc(100vh - 100px);
+      margin-bottom: 2rem;
       font-size: 24px;
     }
   }
 
   .textContainer {
     height: 8rem;
-    // flex: 1;
     align-self: flex-end;
     display: flex;
     align-items: center;
     gap: 20px;
 
     @include mobile {
-      align-self: center;
-      text-align: center;
-      flex-direction: column;
+      display: none;
     }
 
     p {
@@ -53,65 +50,6 @@
       }
     }
   }
-  .titleContainer {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @include mobile {
-      width: 100%;
-    }
-
-    .title {
-      display: flex;
-      align-items: center;
-      gap: 50px;
-
-      @include mobile {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-      }
-
-      img {
-        width: 300px;
-        height: 100px;
-        border-radius: 50px;
-        object-fit: cover;
-
-        @include mobile {
-          width: 200px;
-          height: 50px;
-        }
-      }
-
-      h1 {
-        font-size: 96px;
-        font-weight: 100;
-
-        @include mobile {
-          font-size: 36px;
-        }
-      }
-
-      button {
-        width: 300px;
-        height: 100px;
-        border-radius: 50px;
-        background-color: orange;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-
-        @include mobile {
-          font-size: 16px;
-          width: 150px;
-          height: 50px;
-        }
-      }
-    }
-  }
   .listContainer {
     flex: 1;
     display: flex;
@@ -119,13 +57,15 @@
     margin: auto;
 
     @include mobile {
+      display: flex;
       flex-direction: column;
-      width: 100%;
+      gap: 40px;
+      width: 70%;
     }
 
     .box {
       width: 25%;
-      height: 350px;
+      height: 250px;
       padding: 50px;
       border: 0.5px solid gray;
       display: flex;
@@ -135,12 +75,16 @@
       @include mobile {
         border: none;
         align-items: center;
+        height: fit-content;
         gap: 20px;
         padding: 10px;
       }
 
       h2 {
         color: orange;
+        @include mobile {
+          color: white;
+        }
       }
 
       p {

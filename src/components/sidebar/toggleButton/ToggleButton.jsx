@@ -11,7 +11,7 @@ const ToggleButton = ({ setOpen }) => {
         background: "transparent",
         border: "none",
         cursor: "pointer",
-        padding: "0", // Remove default padding
+        padding: "0",
       }}
     >
       <svg width="23" height="23" viewBox="0 0 23 23">
