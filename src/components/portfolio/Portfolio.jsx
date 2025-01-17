@@ -26,7 +26,7 @@ const items = [
   },
   {
     id: 4,
-    title: "Nike Landing Page Redesign",
+    title: "Nike Product Design",
     img: "/nike.png",
     desc: "In this project, I transformed a Nike shoe poster into a fully functional landing page for a website. The original poster provided inspiration for the layout, and I implemented various web design techniques to create a visually appealing and responsive page. This project highlights my ability to turn static designs into dynamic digital experiences, with a focus on aesthetics and user engagement.",
     link: "https://www.behance.net/gallery/216452559/Nike-Landing-Page",
