@@ -8,10 +8,10 @@ const works = [
     title: "Online Learning Platform",
     description:
       "Designed an end-to-end learning platform at Zidio Development, focusing on intuitive navigation, accessibility, engagement, and a brand-aligned, user-centric experience.",
-    image: "/covid.png",
+    image: "/online-learning-platform.png",
     tags: ["Web Design", "UI/UX", "Information"],
     color: "from-primary to-violet",
-    link: "",
+    link: "https://www.linkedin.com/posts/prashay-sandheliya-a2a95a251_uiux-onlinelearning-productdesign-activity-7310686953291558912-ZfY0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD5BWkIBd5XDcYJ_NL2Gf5s5DqGepLDspBE",
   },
   {
     title: "IRCTC Redesign",

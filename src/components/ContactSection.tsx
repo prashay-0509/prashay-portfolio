@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { sendEmail } from "@/actions/sendEmail";
 
 const socials = [
   { icon: Linkedin, href: "#", label: "LinkedIn" },
@@ -27,20 +28,40 @@ export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const formDataObj = new FormData();
+    formDataObj.append("name", formData.name);
+    formDataObj.append("senderEmail", formData.email);
+    formDataObj.append("message", formData.message);
+
+    const { data, error } = await sendEmail(formDataObj);
+
+    if (error) {
+      toast({
+        title: "Error",
+        description: error,
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
 
     toast({
       title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon!",
+      description: "Thanks for reaching out. I'll get back to you soon.",
     });
 
+    setFormData({ name: "", email: "", message: "" });
     setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
   };
 
   return (
@@ -79,12 +100,12 @@ export const ContactSection = () => {
             </p>
 
             {/* Contact Details */}
-            <div className="space-y-6 mb-10">
+            <div className="space-y-5 mb-10">
               <a
                 href="mailto:prashay0509@gmail.com"
                 className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors group"
               >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-magenta flex items-center justify-center">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-primary/50 flex items-center justify-center">
                   <Mail className="w-5 h-5 text-foreground" />
                 </div>
                 <div>
@@ -97,14 +118,14 @@ export const ContactSection = () => {
 
               <a
                 href="tel:+919589517162"
-                className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors group"
+                className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-secondary/50 transition-colors group"
               >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan to-secondary flex items-center justify-center">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-secondary to-secondary/50 flex items-center justify-center">
                   <Phone className="w-5 h-5 text-foreground" />
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Phone</p>
-                  <p className="font-medium text-foreground group-hover:text-primary transition-colors">
+                  <p className="font-medium text-foreground group-hover:text-secondary transition-colors">
                     +91 9589517162
                   </p>
                 </div>
@@ -156,14 +177,14 @@ export const ContactSection = () => {
                   />
                 </div>
               </div>
-              <div>
+              {/* <div>
                 <Input
                   type="text"
                   placeholder="Subject"
                   required
                   className="bg-card border-border focus:border-primary h-12"
                 />
-              </div>
+              </div> */}
               <div>
                 <Textarea
                   placeholder="Your Message"

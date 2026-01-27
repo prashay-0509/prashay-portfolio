@@ -83,7 +83,7 @@ export const AboutSection = () => {
             <div className="grid grid-cols-3 gap-6 mt-10">
               {[
                 { number: "8+", label: "Projects" },
-                { number: "2+", label: "Years Exp" },
+                { number: "3+", label: "Years Exp" },
                 { number: "100%", label: "Passion" },
               ].map((stat, i) => (
                 <motion.div
