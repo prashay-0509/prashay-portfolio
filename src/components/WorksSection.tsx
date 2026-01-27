@@ -12,6 +12,7 @@ const works = [
     image: "/covid.png",
     tags: ["Web Design", "UI/UX", "Information"],
     color: "from-primary to-violet",
+    link: "",
   },
   {
     title: "IRCTC Redesign",
@@ -20,6 +21,7 @@ const works = [
     image: "/irctc.png",
     tags: ["UI/UX", "Redesign", "Travel"],
     color: "from-orange-500 to-violet",
+    link: "https://www.behance.net/gallery/216452185/IRCTC-Website-Redesign",
   },
   {
     title: "EchoVibe Website",
@@ -28,6 +30,7 @@ const works = [
     image: "/headphones.png",
     tags: ["Animation", "E-commerce", "Product"],
     color: "from-accent to-coral",
+    link: "https://www.behance.net/gallery/216879489/Website-Design-for-Headphones",
   },
 ];
 
@@ -112,11 +115,19 @@ export const WorksSection = () => {
                 </p>
 
                 <Button
-                  variant="outline"
-                  className="group/btn border-primary/50 hover:bg-primary hover:text-primary-foreground font-display"
+                  asChild
+                  variant={"outline"}
+                  className="font-display border-primary/50 hover:bg-primary hover:text-primary-foreground"
                 >
-                  See Demo
-                  <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                  <a
+                    href={work.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 group"
+                  >
+                    See Demo
+                    <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </a>
                 </Button>
               </div>
             </motion.div>

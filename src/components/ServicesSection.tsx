@@ -8,7 +8,7 @@ const services = [
     title: "Graphic Design",
     description:
       "Building strong brand identities, engaging visuals, and impactful marketing materials to enhance communication and audience connection.",
-    color: "from-primary to-magenta",
+    color: "from-primary to-primary/50",
   },
   {
     icon: Layout,
@@ -22,7 +22,7 @@ const services = [
     title: "Social Media Design",
     description:
       "Creating eye-catching social media content and managing your brand's online presence to drive engagement and growth.",
-    color: "from-accent to-coral",
+    color: "from-accent to-accent/50",
   },
   {
     icon: Sparkles,

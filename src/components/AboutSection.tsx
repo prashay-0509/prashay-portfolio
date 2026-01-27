@@ -19,16 +19,18 @@ export const AboutSection = () => {
           >
             <div className="relative aspect-square max-w-md mx-auto">
               {/* Gradient border effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary via-violet to-cyan p-[2px]">
+              <div className="absolute z-10 inset-0 rounded-2xl bg-gradient-to-br from-primary via-violet to-cyan p-[2px]">
                 <div className="w-full h-full rounded-2xl bg-card flex items-center justify-center">
                   <div className="text-center p-8">
-                    <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-cyan flex items-center justify-center">
-                      <span className="font-display text-5xl font-bold text-primary-foreground">
-                        P
-                      </span>
+                    <div className="w-60 h-60 md:w-72 md:h-72 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-cyan flex items-center justify-center">
+                      <img
+                        src="/prashay-pic.jpeg"
+                        className="rounded-full object-cover w-60 h-60 md:w-72 md:h-72"
+                        alt="Prashay"
+                      />
                     </div>
                     <p className="text-muted-foreground text-sm">
-                      Creative Designer
+                      Prashay Sandheliya
                     </p>
                   </div>
                 </div>
@@ -37,7 +39,7 @@ export const AboutSection = () => {
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute -top-4 -right-4 w-24 h-24 border border-primary/30 rounded-full"
+                className="absolute z-2 -top-4 -right-4 w-24 h-24 border border-primary/30 rounded-full"
               />
               <motion.div
                 animate={{ y: [0, -10, 0] }}
@@ -46,7 +48,7 @@ export const AboutSection = () => {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute -bottom-2 -left-2 w-16 h-16 bg-accent/20 rounded-xl blur-sm"
+                className="absolute -bottom-6 -left-6 w-16 h-16 bg-accent/20 rounded-xl blur-sm"
               />
             </div>
           </motion.div>
@@ -80,7 +82,7 @@ export const AboutSection = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 mt-10">
               {[
-                { number: "4+", label: "Projects" },
+                { number: "8+", label: "Projects" },
                 { number: "2+", label: "Years Exp" },
                 { number: "100%", label: "Passion" },
               ].map((stat, i) => (

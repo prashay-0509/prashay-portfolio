@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 
 const works = [
   {
-    title: "COVID Info Hub",
+    title: "Online Learning Platform",
     description:
-      "A COVID-based website providing comprehensive pandemic information, safety guidelines, and statistics with a user-friendly interface and intuitive navigation.",
-    image: "https://prashay-sandheliya.vercel.app/covid.png",
+      "Designed an end-to-end learning platform at Zidio Development, focusing on intuitive navigation, accessibility, engagement, and a brand-aligned, user-centric experience.",
+    image: "/covid.png",
     tags: ["Web Design", "UI/UX", "Information"],
     color: "from-primary to-violet",
+    link: "",
   },
   {
     title: "IRCTC Redesign",
@@ -18,7 +19,8 @@ const works = [
       "A complete redesign of the IRCTC website with improved alignment, enhanced navigation, and a more accessible, visually cohesive layout.",
     image: "https://prashay-sandheliya.vercel.app/irctc.png",
     tags: ["UI/UX", "Redesign", "Travel"],
-    color: "from-cyan to-secondary",
+    color: "from-green-500 to-violet",
+    link: "https://www.behance.net/gallery/216452185/IRCTC-Website-Redesign",
   },
   {
     title: "EchoVibe Website",
@@ -27,6 +29,7 @@ const works = [
     image: "https://prashay-sandheliya.vercel.app/headphones.png",
     tags: ["Animation", "E-commerce", "Product"],
     color: "from-accent to-coral",
+    link: "https://www.behance.net/gallery/216879489/Website-Design-for-Headphones",
   },
   {
     title: "Nike Product Design",
@@ -34,7 +37,17 @@ const works = [
       "Transformed a Nike shoe poster into a fully functional, responsive landing page with focus on aesthetics and user engagement.",
     image: "https://prashay-sandheliya.vercel.app/nike.png",
     tags: ["Landing Page", "Product", "Branding"],
-    color: "from-magenta to-primary",
+    color: "from-orange-500 to-violet",
+    link: "https://www.behance.net/gallery/216452559/Nike-Landing-Page",
+  },
+  {
+    title: "COVID Info Hub",
+    description:
+      "A COVID-based website providing comprehensive pandemic information, safety guidelines, and statistics with a user-friendly interface and intuitive navigation.",
+    image: "https://prashay-sandheliya.vercel.app/covid.png",
+    tags: ["Web Design", "UI/UX", "Information"],
+    color: "from-blue-500 to-violet",
+    link: "https://www.behance.net/gallery/216954649/COVID-Info-Hub",
   },
   {
     title: "Hospital Recruitment Advertisement Design",
@@ -42,7 +55,8 @@ const works = [
       "Designed a clean, empathetic hospital recruitment ad emphasizing clarity, trust, strong visual hierarchy, healthcare-appropriate colors, and professional typography.",
     image: "/hospital-recruitment.jpeg",
     tags: ["Graphic Design", "Advertising", "Poster Design", "Visual"],
-    color: "from-accent to-coral",
+    color: "from-purple-500 to-violet",
+    link: "https://www.behance.net/gallery/232979547/Hospital-Advertisement",
   },
   {
     title: "Course Promotional Poster",
@@ -50,7 +64,8 @@ const works = [
       "Designed a festive Onam promotional poster combining cultural elements with strong typography, visual hierarchy, and CTA-focused marketing design.",
     image: "/promotional-poster.png",
     tags: ["Graphic Design", "Poster", "Marketing"],
-    color: "from-accent to-coral",
+    color: "from-pink-500 to-violet",
+    link: "https://www.behance.net/gallery/242973833/Marketing-poster",
   },
   {
     title: "Corporate Business Card",
@@ -58,7 +73,8 @@ const works = [
       "Designed a minimal corporate business card focusing on clean geometry, visual hierarchy, refined typography, and brand consistency to convey professionalism and trust.",
     image: "/business-card.png",
     tags: ["Branding", "Logo Design", "Identity"],
-    color: "from-accent to-coral",
+    color: "from-teal-500 to-violet",
+    link: "https://www.behance.net/gallery/242974213/Corporate-Business-Card-Brand-Identity-Design",
   },
 ];
 
@@ -163,11 +179,19 @@ const Projects = () => {
                   </p>
 
                   <Button
-                    variant="outline"
-                    className="group/btn border-primary/50 hover:bg-primary hover:text-primary-foreground font-display"
+                    asChild
+                    variant={"outline"}
+                    className="font-display border-primary/50 hover:bg-primary hover:text-primary-foreground"
                   >
-                    See Demo
-                    <ExternalLink className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    <a
+                      href={work.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 group"
+                    >
+                      See Demo
+                      <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </a>
                   </Button>
                 </div>
               </motion.div>
