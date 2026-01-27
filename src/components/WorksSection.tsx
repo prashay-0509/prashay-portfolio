@@ -9,7 +9,7 @@ const works = [
     title: "Online Learning Platform",
     description:
       "Designed an end-to-end learning platform at Zidio Development, focusing on intuitive navigation, accessibility, engagement, and a brand-aligned, user-centric experience.",
-    image: "https://prashay-sandheliya.vercel.app/covid.png",
+    image: "/covid.png",
     tags: ["Web Design", "UI/UX", "Information"],
     color: "from-primary to-violet",
   },
@@ -17,7 +17,7 @@ const works = [
     title: "IRCTC Redesign",
     description:
       "A complete redesign of the IRCTC website with improved alignment, enhanced navigation, and a more accessible, visually cohesive layout.",
-    image: "https://prashay-sandheliya.vercel.app/irctc.png",
+    image: "/irctc.png",
     tags: ["UI/UX", "Redesign", "Travel"],
     color: "from-orange-500 to-violet",
   },
@@ -25,32 +25,8 @@ const works = [
     title: "EchoVibe Website",
     description:
       "A sleek website for a fictional headphone company featuring scroll-down animations, carousel effects, and modern morphism design style.",
-    image: "https://prashay-sandheliya.vercel.app/headphones.png",
+    image: "/headphones.png",
     tags: ["Animation", "E-commerce", "Product"],
-    color: "from-accent to-coral",
-  },
-  {
-    title: "Hospital Recruitment Advertisement Design",
-    description:
-      "Designed a clean, empathetic hospital recruitment ad emphasizing clarity, trust, strong visual hierarchy, healthcare-appropriate colors, and professional typography.",
-    image: "https://prashay-sandheliya.vercel.app/headphones.png",
-    tags: ["Graphic Design", "Advertising", "Poster Design", "Visual"],
-    color: "from-accent to-coral",
-  },
-  {
-    title: "Course Promotional Poster",
-    description:
-      "Designed a festive Onam promotional poster combining cultural elements with strong typography, visual hierarchy, and CTA-focused marketing design.",
-    image: "https://prashay-sandheliya.vercel.app/headphones.png",
-    tags: ["Graphic Design", "Poster", "Marketing"],
-    color: "from-accent to-coral",
-  },
-  {
-    title: "Corporate Business Card",
-    description:
-      "Designed a minimal corporate business card focusing on clean geometry, visual hierarchy, refined typography, and brand consistency to convey professionalism and trust.",
-    image: "https://prashay-sandheliya.vercel.app/headphones.png",
-    tags: ["Branding", "Logo Design", "Identity"],
     color: "from-accent to-coral",
   },
 ];

@@ -36,6 +36,30 @@ const works = [
     tags: ["Landing Page", "Product", "Branding"],
     color: "from-magenta to-primary",
   },
+  {
+    title: "Hospital Recruitment Advertisement Design",
+    description:
+      "Designed a clean, empathetic hospital recruitment ad emphasizing clarity, trust, strong visual hierarchy, healthcare-appropriate colors, and professional typography.",
+    image: "/hospital-recruitment.jpeg",
+    tags: ["Graphic Design", "Advertising", "Poster Design", "Visual"],
+    color: "from-accent to-coral",
+  },
+  {
+    title: "Course Promotional Poster",
+    description:
+      "Designed a festive Onam promotional poster combining cultural elements with strong typography, visual hierarchy, and CTA-focused marketing design.",
+    image: "/promotional-poster.png",
+    tags: ["Graphic Design", "Poster", "Marketing"],
+    color: "from-accent to-coral",
+  },
+  {
+    title: "Corporate Business Card",
+    description:
+      "Designed a minimal corporate business card focusing on clean geometry, visual hierarchy, refined typography, and brand consistency to convey professionalism and trust.",
+    image: "/business-card.png",
+    tags: ["Branding", "Logo Design", "Identity"],
+    color: "from-accent to-coral",
+  },
 ];
 
 const Projects = () => {
