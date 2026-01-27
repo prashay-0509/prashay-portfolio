@@ -1,25 +1,29 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import {
-  Mail,
-  Phone,
-  Send,
-  Linkedin,
-  Twitter,
-  Instagram,
-  Github,
-} from "lucide-react";
+import { Mail, Phone, Send, Linkedin, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { sendEmail } from "@/actions/sendEmail";
+import { FaBehance } from "react-icons/fa";
 
 const socials = [
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Github, href: "#", label: "GitHub" },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/prashay-sandheliya-a2a95a251/",
+    label: "LinkedIn",
+  },
+  {
+    icon: FaBehance,
+    href: "https://www.behance.net/prashaysandhel",
+    label: "Behance",
+  },
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/pra_0509",
+    label: "Instagram",
+  },
 ];
 
 export const ContactSection = () => {
@@ -43,17 +47,19 @@ export const ContactSection = () => {
     formDataObj.append("senderEmail", formData.email);
     formDataObj.append("message", formData.message);
 
-    const { data, error } = await sendEmail(formDataObj);
+    console.log(formDataObj);
 
-    if (error) {
-      toast({
-        title: "Error",
-        description: error,
-        variant: "destructive",
-      });
-      setIsSubmitting(false);
-      return;
-    }
+    // const { data, error } = await sendEmail(formDataObj);
+
+    // if (error) {
+    //   toast({
+    //     title: "Error",
+    //     description: error,
+    //     variant: "destructive",
+    //   });
+    //   setIsSubmitting(false);
+    //   return;
+    // }
 
     toast({
       title: "Message sent!",
@@ -142,10 +148,12 @@ export const ContactSection = () => {
                   <motion.a
                     key={social.label}
                     href={social.href}
+                    target="_blank"
                     whileHover={{ y: -4 }}
+                    transition={{ duration: 0.1 }}
                     className="w-12 h-12 rounded-lg bg-card border border-border flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all"
                   >
-                    <social.icon className="w-5 h-5 text-muted-foreground hover:text-primary" />
+                    <social.icon className="w-5 h-5 text-muted-foreground" />
                   </motion.a>
                 ))}
               </div>
