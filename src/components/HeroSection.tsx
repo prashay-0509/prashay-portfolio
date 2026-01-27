@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden section-padding pt-24">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden section-padding pt-4">
       {/* Background Glow Effects */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -102,7 +102,9 @@ export const HeroSection = () => {
             size="lg"
             className="border-border hover:bg-card font-display font-semibold px-8 py-6 text-lg rounded-full"
           >
-            <a href="#contact">Contact Me</a>
+            <a href="#contact" className="hover:text-white">
+              Contact Me
+            </a>
           </Button>
         </motion.div>
 
@@ -111,7 +113,7 @@ export const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute -bottom-20 left-1/2 -translate-x-1/2"
         >
           <motion.a
             href="#about"

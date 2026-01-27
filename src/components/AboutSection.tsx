@@ -89,7 +89,7 @@ export const AboutSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.4 + i * 0.1 }}
-                  className="text-center md:text-left"
+                  className="text-center"
                 >
                   <p className="font-display text-3xl md:text-4xl font-bold gradient-text">
                     {stat.number}

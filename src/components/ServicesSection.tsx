@@ -15,7 +15,7 @@ const services = [
     title: "UI/UX Design",
     description:
       "Crafting user-centric and responsive websites that offer seamless navigation and exceptional user experiences.",
-    color: "from-cyan to-secondary",
+    color: "from-orange-500 to-orange-800",
   },
   {
     icon: Share2,
@@ -29,7 +29,7 @@ const services = [
     title: "Animated Web Design",
     description:
       "Adding dynamic animations to your web designs, making them more interactive and engaging for users.",
-    color: "from-violet to-primary",
+    color: "from-blue-500 to-blue-800",
   },
 ];
 

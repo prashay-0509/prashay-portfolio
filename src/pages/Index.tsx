@@ -4,7 +4,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { Navbar } from "@/components/Navbar";
 import { ServicesSection } from "@/components/ServicesSection";
 import { WorksSection } from "@/components/WorksSection";
-import { Footer } from "react-day-picker";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
