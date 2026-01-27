@@ -29,5 +29,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "shared", "api", "email"]
+  "include": ["src", "api/_shared", "api", "email"]
 }

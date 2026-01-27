@@ -5,7 +5,7 @@ import {
   getErrorMessage,
   validateEmail,
   validateString,
-} from "../shared/helper.ts";
+} from "./_shared/helper";
 import ContactFormEmail from "../email/email-contact-form.tsx";
 
 const resend = new Resend(process.env.RESEND_API_KEY!);
