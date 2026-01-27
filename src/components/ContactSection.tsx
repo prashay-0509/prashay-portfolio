@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { sendEmail } from "@/actions/sendEmail";
 import { FaBehance } from "react-icons/fa";
 
 const socials = [
@@ -42,32 +41,40 @@ export const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formDataObj = new FormData();
-    formDataObj.append("name", formData.name);
-    formDataObj.append("senderEmail", formData.email);
-    formDataObj.append("message", formData.message);
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          senderEmail: formData.email,
+          message: formData.message,
+        }),
+      });
 
-    console.log(formDataObj);
+      const result = await response.json();
 
-    // const { data, error } = await sendEmail(formDataObj);
+      if (!response.ok || result.error) {
+        console.log(result.error);
 
-    // if (error) {
-    //   toast({
-    //     title: "Error",
-    //     description: error,
-    //     variant: "destructive",
-    //   });
-    //   setIsSubmitting(false);
-    //   return;
-    // }
+        throw new Error(result.error || "Failed to send message");
+      }
 
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    });
+      toast({
+        title: "Message sent!",
+        description: "Thanks for reaching out. I'll get back to you soon.",
+      });
 
-    setFormData({ name: "", email: "", message: "" });
-    setIsSubmitting(false);
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error: any) {
+      toast({
+        title: "Error",
+        description: error.message || "Something went wrong.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -172,6 +179,9 @@ export const ContactSection = () => {
                   <Input
                     type="text"
                     placeholder="Your Name"
+                    onChange={(e) =>
+                      setFormData({ ...formData, name: e.target.value })
+                    }
                     required
                     className="bg-card border-border focus:border-primary h-12"
                   />
@@ -181,6 +191,9 @@ export const ContactSection = () => {
                     type="email"
                     placeholder="Your Email"
                     required
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
                     className="bg-card border-border focus:border-primary h-12"
                   />
                 </div>
@@ -198,6 +211,9 @@ export const ContactSection = () => {
                   placeholder="Your Message"
                   rows={6}
                   required
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
                   className="bg-card border-border focus:border-primary resize-none"
                 />
               </div>
