@@ -6,7 +6,7 @@ import {
   validateEmail,
   validateString,
 } from "./_shared/helper.js";
-import ContactFormEmail from "../email/email-contact-form.jsx";
+import ContactFormEmail from "../email/email-contact-form.js";
 
 const resend = new Resend(process.env.RESEND_API_KEY!);
 
