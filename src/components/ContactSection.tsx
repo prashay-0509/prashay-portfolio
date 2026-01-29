@@ -55,9 +55,10 @@ export const ContactSection = () => {
       const result = await response.json();
 
       if (!response.ok || result.error) {
-        console.log(result.error);
-
-        throw new Error(result.error || "Failed to send message");
+        toast({
+          title: "Error",
+          description: result.error || "Failed to send message",
+        });
       }
 
       toast({
