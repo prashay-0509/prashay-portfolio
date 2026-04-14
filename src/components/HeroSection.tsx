@@ -68,7 +68,7 @@ export const HeroSection = () => {
         >
           <span className="text-foreground">Graphic Designer</span>
           <br />
-          <span className="gradient-text">&amp; UI Designer</span>
+          <span className="gradient-text">&amp; UI/UX Designer</span>
         </motion.h1>
 
         {/* Subtitle */}
